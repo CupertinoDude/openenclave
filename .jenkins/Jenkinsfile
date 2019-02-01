@@ -143,7 +143,7 @@ def win2016DebugCrossPlatform() {
                     dir('build') {
                         withEnv(["CC=clang-7","CXX=clang++-7","OE_SIMULATION=1"]) {
                             sh """
-                            cmake .. -DCMAKE_BUILD_TYPE=Debug -DUSE_DEBUG_MALLOC=OFF
+                            cmake .. -DCMAKE_BUILD_TYPE=Debug
                             make
                             ctest --output-on-failure
                             """
